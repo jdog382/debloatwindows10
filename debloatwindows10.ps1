@@ -589,7 +589,6 @@ $essentialtweaks.Add_Click({
 
 $Bloatware = @(
 	"Microsoft.3DBuilder"
-	"*LinkedInforWindows*"
 	"Microsoft.AppConnector"
 	"Microsoft.Microsoft3DViewer"
 	"*Microsoft.Advertising.Xaml*"
