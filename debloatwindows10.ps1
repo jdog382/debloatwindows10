@@ -729,7 +729,7 @@ $Paint3Dstuff = @(
 	"HKCR:\SystemFileAssociations\.tif\Shell\3D Edit"
 	"HKCR:\SystemFileAssociations\.tiff\Shell\3D Edit"
     )
-    #Rename reg key to remove it, so it's revertible
+    #Rename reg key to remove it, so it's reversible
     foreach ($Paint3D in $Paint3Dstuff) {
         If (Test-Path $Paint3D) {
 	    $rmPaint3D = $Paint3D + "_"
