@@ -239,7 +239,7 @@ $securityhigh.location           = New-Object System.Drawing.Point(244,119)
 $securityhigh.Font               = New-Object System.Drawing.Font('Microsoft Sans Serif',15,[System.Drawing.FontStyle]([System.Drawing.FontStyle]::Bold))
 
 $Label5                          = New-Object system.Windows.Forms.Label
-$Label5.text                     = "- Set UAC to Never Prompt"
+$Label5.text                     = "- Sets UAC to 'Never notify'"
 $Label5.AutoSize                 = $true
 $Label5.width                    = 150
 $Label5.height                   = 10
@@ -247,7 +247,7 @@ $Label5.location                 = New-Object System.Drawing.Point(24,40)
 $Label5.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $Label6                          = New-Object system.Windows.Forms.Label
-$Label6.text                     = "- Disable Windows Defender"
+$Label6.text                     = "- Disables Windows Defender"
 $Label6.AutoSize                 = $true
 $Label6.width                    = 150
 $Label6.height                   = 10
@@ -255,7 +255,7 @@ $Label6.location                 = New-Object System.Drawing.Point(24,6)
 $Label6.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $Label7                          = New-Object system.Windows.Forms.Label
-$Label7.text                     = "- Disable Defender Updates"
+$Label7.text                     = "- Disables Defender updates"
 $Label7.AutoSize                 = $true
 $Label7.width                    = 150
 $Label7.height                   = 10
@@ -263,7 +263,7 @@ $Label7.location                 = New-Object System.Drawing.Point(24,23)
 $Label7.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $Label8                          = New-Object system.Windows.Forms.Label
-$Label8.text                     = "- Disable Windows Malware Scan"
+$Label8.text                     = "- Disables Windows Malware Scan"
 $Label8.AutoSize                 = $true
 $Label8.width                    = 150
 $Label8.height                   = 10
@@ -271,7 +271,7 @@ $Label8.location                 = New-Object System.Drawing.Point(24,75)
 $Label8.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $Label9                          = New-Object system.Windows.Forms.Label
-$Label9.text                     = "- Disable Meltdown Flag"
+$Label9.text                     = "- Disables Meltdown Flag"
 $Label9.AutoSize                 = $true
 $Label9.width                    = 150
 $Label9.height                   = 10
@@ -279,7 +279,7 @@ $Label9.location                 = New-Object System.Drawing.Point(24,58)
 $Label9.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $Label10                         = New-Object system.Windows.Forms.Label
-$Label10.text                    = "- Set UAC to Always Prompt"
+$Label10.text                    = "- Sets UAC to Always Prompt"
 $Label10.AutoSize                = $true
 $Label10.width                   = 25
 $Label10.height                  = 10
@@ -287,7 +287,7 @@ $Label10.location                = New-Object System.Drawing.Point(233,40)
 $Label10.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $Label11                         = New-Object system.Windows.Forms.Label
-$Label11.text                    = "- Enable Windows Defender"
+$Label11.text                    = "- Enables Windows Defender"
 $Label11.AutoSize                = $true
 $Label11.width                   = 25
 $Label11.height                  = 10
@@ -295,7 +295,7 @@ $Label11.location                = New-Object System.Drawing.Point(233,57)
 $Label11.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $Label12                         = New-Object system.Windows.Forms.Label
-$Label12.text                    = "- Enable Windows Malware Scan"
+$Label12.text                    = "- Enables Windows Malware Scan"
 $Label12.AutoSize                = $true
 $Label12.width                   = 25
 $Label12.height                  = 10
@@ -303,7 +303,7 @@ $Label12.location                = New-Object System.Drawing.Point(233,6)
 $Label12.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $Label13                         = New-Object system.Windows.Forms.Label
-$Label13.text                    = "- Enable Meltdown Flag"
+$Label13.text                    = "- Enables Meltdown Flag"
 $Label13.AutoSize                = $true
 $Label13.width                   = 25
 $Label13.height                  = 10
@@ -324,21 +324,21 @@ $Panel4.width                    = 340
 $Panel4.location                 = New-Object System.Drawing.Point(9,491)
 
 $defaultwindowsupdate            = New-Object system.Windows.Forms.Button
-$defaultwindowsupdate.text       = "Default Settings"
+$defaultwindowsupdate.text       = "Default settings"
 $defaultwindowsupdate.width      = 300
 $defaultwindowsupdate.height     = 30
 $defaultwindowsupdate.location   = New-Object System.Drawing.Point(20,13)
 $defaultwindowsupdate.Font       = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 
 $securitywindowsupdate           = New-Object system.Windows.Forms.Button
-$securitywindowsupdate.text      = "Security Updates Only"
+$securitywindowsupdate.text      = "Security updates Only"
 $securitywindowsupdate.width     = 300
 $securitywindowsupdate.height    = 30
 $securitywindowsupdate.location  = New-Object System.Drawing.Point(20,119)
 $securitywindowsupdate.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 
 $Label17                         = New-Object system.Windows.Forms.Label
-$Label17.text                    = "- Delays Features updates up to 3 years"
+$Label17.text                    = "- Delays features updates up to 3 years"
 $Label17.AutoSize                = $true
 $Label17.width                   = 25
 $Label17.height                  = 10
@@ -346,7 +346,7 @@ $Label17.location                = New-Object System.Drawing.Point(71,66)
 $Label17.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $Label18                         = New-Object system.Windows.Forms.Label
-$Label18.text                    = "- Delays Security updates 4 days"
+$Label18.text                    = "- Delays security updates up to 4 days"
 $Label18.AutoSize                = $true
 $Label18.width                   = 25
 $Label18.height                  = 10
