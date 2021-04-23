@@ -377,7 +377,7 @@ $Panel4.controls.AddRange(@($defaultwindowsupdate,$securitywindowsupdate,$Label1
 
 $installchoco.Add_Click({ 
     Write-Host "Installing Chocolatey"
-	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 	choco install chocolatey-core.extension -y
 	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
@@ -700,8 +700,8 @@ $Bloatware = @(
 	$URLAssoc = Get-ItemProperty $URLAssocKey 
 		
 	$Associations = @() 
-	$Filetypes.Property | foreach {$Associations += $FileAssoc.$_} 
-	$URLTypes.Property | foreach {$Associations += $URLAssoc.$_} 
+	$Filetypes.Property | ForEach-Object {$Associations += $FileAssoc.$_} 
+	$URLTypes.Property | ForEach-Object {$Associations += $URLAssoc.$_} 
 		
 	# add registry values in each software class to stop edge from associating as the default 
 	foreach ($Association in $Associations) 
@@ -758,7 +758,7 @@ $windowssearch.Add_Click({
 
 $backgroundapps.Add_Click({ 
     Write-Host "Disabling Background application access..."
-	Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" -Exclude "Microsoft.Windows.Cortana*" | ForEach {
+	Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" -Exclude "Microsoft.Windows.Cortana*" | ForEach-Object {
 		Set-ItemProperty -Path $_.PsPath -Name "Disabled" -Type DWord -Value 1
 		Set-ItemProperty -Path $_.PsPath -Name "DisabledByUser" -Type DWord -Value 1
 	}
