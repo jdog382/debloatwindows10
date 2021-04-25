@@ -631,7 +631,6 @@ $Bloatware = @(
 	"Microsoft.NetworkSpeedTest"
 	"Microsoft.News"
 	"Microsoft.Office.Lens"
-	"*Microsoft.WindowsCalculator*"
 	"Microsoft.Office.Sway"
 	"Microsoft.OneConnect"
 	"Microsoft.People"
