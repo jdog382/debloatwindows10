@@ -135,7 +135,7 @@ $vscode.location                 = New-Object System.Drawing.Point(751,19)
 $vscode.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 $Label2                          = New-Object system.Windows.Forms.Label
-$Label2.text                     = "Chocolatey Required for installs"
+$Label2.text                     = "Chocolatey required for installs"
 $Label2.AutoSize                 = $true
 $Label2.width                    = 25
 $Label2.height                   = 10
@@ -198,7 +198,7 @@ $darkmode.location               = New-Object System.Drawing.Point(417,7)
 $darkmode.Font                   = New-Object System.Drawing.Font('Microsoft Sans Serif',12)
 
 $visualfx                        = New-Object system.Windows.Forms.Button
-$visualfx.text                   = "Disable visual FX"
+$visualfx.text                   = "Visual FX"
 $visualfx.width                  = 150
 $visualfx.height                 = 30
 $visualfx.location               = New-Object System.Drawing.Point(417,82)
@@ -255,7 +255,7 @@ $Label6.location                 = New-Object System.Drawing.Point(24,6)
 $Label6.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $Label7                          = New-Object system.Windows.Forms.Label
-$Label7.text                     = "- Disables Defender updates"
+$Label7.text                     = "- Disables Defender Updates"
 $Label7.AutoSize                 = $true
 $Label7.width                    = 150
 $Label7.height                   = 10
@@ -279,7 +279,7 @@ $Label9.location                 = New-Object System.Drawing.Point(24,58)
 $Label9.Font                     = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $Label10                         = New-Object system.Windows.Forms.Label
-$Label10.text                    = "- Sets UAC to Always Prompt"
+$Label10.text                    = "- Sets UAC to 'Always notify'"
 $Label10.AutoSize                = $true
 $Label10.width                   = 25
 $Label10.height                  = 10
@@ -324,21 +324,21 @@ $Panel4.width                    = 340
 $Panel4.location                 = New-Object System.Drawing.Point(9,491)
 
 $defaultwindowsupdate            = New-Object system.Windows.Forms.Button
-$defaultwindowsupdate.text       = "Default settings"
+$defaultwindowsupdate.text       = "Default Settings"
 $defaultwindowsupdate.width      = 300
 $defaultwindowsupdate.height     = 30
 $defaultwindowsupdate.location   = New-Object System.Drawing.Point(20,13)
 $defaultwindowsupdate.Font       = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 
 $securitywindowsupdate           = New-Object system.Windows.Forms.Button
-$securitywindowsupdate.text      = "Security updates Only"
+$securitywindowsupdate.text      = "Security Updates Only"
 $securitywindowsupdate.width     = 300
 $securitywindowsupdate.height    = 30
 $securitywindowsupdate.location  = New-Object System.Drawing.Point(20,119)
 $securitywindowsupdate.Font      = New-Object System.Drawing.Font('Microsoft Sans Serif',14)
 
 $Label17                         = New-Object system.Windows.Forms.Label
-$Label17.text                    = "- Delays features updates up to 3 years"
+$Label17.text                    = "- Delays feature updates up to 3 years"
 $Label17.AutoSize                = $true
 $Label17.width                   = 25
 $Label17.height                  = 10
@@ -352,14 +352,6 @@ $Label18.width                   = 25
 $Label18.height                  = 10
 $Label18.location                = New-Object System.Drawing.Point(71,84)
 $Label18.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
-
-$Label19                         = New-Object system.Windows.Forms.Label
-$Label19.text                    = "- Sets Maximum Active Time"
-$Label19.AutoSize                = $true
-$Label19.width                   = 25
-$Label19.height                  = 10
-$Label19.location                = New-Object System.Drawing.Point(71,103)
-$Label19.Font                    = New-Object System.Drawing.Font('Microsoft Sans Serif',10)
 
 $lightmode                       = New-Object system.Windows.Forms.Button
 $lightmode.text                  = "Light Mode"
@@ -377,81 +369,81 @@ $Panel4.controls.AddRange(@($defaultwindowsupdate,$securitywindowsupdate,$Label1
 
 $installchoco.Add_Click({
     Write-Host "Installing Chocolatey"
-	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 	choco install chocolatey-core.extension -y
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $brave.Add_Click({
 	Write-Host "Installing Brave Browser"
 	choco install brave -y
-	    $wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	    $wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $firefox.Add_Click({
     Write-Host "Installing Firefox"
     choco install firefox -y
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $gchrome.Add_Click({
     Write-Host "Installing Google Chrome"
     choco install googlechrome -y
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $irfanview.Add_Click({
     Write-Host "Installing Irfanview (Image Viewer)"
     choco install irfanview -y
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $adobereader.Add_Click({
     Write-Host "Installing Adobe Reader DC"
     choco install adobereader -y
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $notepad.Add_Click({
     Write-Host "Installing Notepad++"
     choco install notepadplusplus -y
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $vlc.Add_Click({
     Write-Host "Installing VLC Media Player"
     choco install vlc -y
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $mpc.Add_Click({
     Write-Host "Installing Media Player Classic"
     choco install mpc-be -y
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $7zip.Add_Click({
     Write-Host "Installing 7-Zip Compression Tool"
     choco install 7zip -y
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $vscode.Add_Click({
     Write-Host "Installing Visual Studio Code"
     choco install vscode -y
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $winterminal.Add_Click({
     Write-Host "Installing New Windows Terminal"
     choco install microsoft-windows-terminal -y
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $powertoys.Add_Click({
     Write-Host "Installing Microsoft PowerToys"
     choco install powertoys -y
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $essentialtweaks.Add_Click({
@@ -541,12 +533,6 @@ $essentialtweaks.Add_Click({
 	Set-Service "SysMain" -StartupType Disabled
     Write-Host "Setting BIOS time to UTC..."
 	Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" -Name "RealTimeIsUniversal" -Type DWord -Value 1
-    Write-Host "Disabling Hibernation..."
-	Set-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Session Manager\Power" -Name "HibernteEnabled" -Type Dword -Value 0
-	If (!(Test-Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings")) {
-		New-Item -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings" | Out-Null
-	}
-	Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FlyoutMenuSettings" -Name "ShowHibernateOption" -Type Dword -Value 0
     Write-Host "Showing task manager details..."
 	$taskmgr = Start-Process -WindowStyle Hidden -FilePath taskmgr.exe -PassThru
 	Do {
@@ -588,6 +574,7 @@ $essentialtweaks.Add_Click({
 	Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" -Name "IRPStackSize" -Type DWord -Value 20
 
 $Bloatware = @(
+
 	"Microsoft.3DBuilder"
 	"Microsoft.AppConnector"
 	"Microsoft.Microsoft3DViewer"
@@ -700,8 +687,8 @@ $Bloatware = @(
 	$URLAssoc = Get-ItemProperty $URLAssocKey
 
 	$Associations = @()
-	$Filetypes.Property | foreach {$Associations += $FileAssoc.$_}
-	$URLTypes.Property | foreach {$Associations += $URLAssoc.$_}
+	$Filetypes.Property | ForEach-Object {$Associations += $FileAssoc.$_}
+	$URLTypes.Property | ForEach-Object {$Associations += $URLAssoc.$_}
 
 	# add registry values in each software class to stop edge from associating as the default
 	foreach ($Association in $Associations)
@@ -729,7 +716,7 @@ $Paint3Dstuff = @(
 	"HKCR:\SystemFileAssociations\.tif\Shell\3D Edit"
 	"HKCR:\SystemFileAssociations\.tiff\Shell\3D Edit"
     )
-    #Rename reg key to remove it, so it's reversible
+    #Rename reg key to remove it, so it's revertible
     foreach ($Paint3D in $Paint3Dstuff) {
         If (Test-Path $Paint3D) {
 	    $rmPaint3D = $Paint3D + "_"
@@ -737,7 +724,7 @@ $Paint3Dstuff = @(
 	}
     }
 
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $windowssearch.Add_Click({
@@ -753,16 +740,16 @@ $windowssearch.Add_Click({
 	Set-Service "WSearch" -StartupType Disabled
     Write-Host "Hiding Taskbar Search icon / box..."
 	Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" -Name "SearchboxTaskbarMode" -Type DWord -Value 0
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $backgroundapps.Add_Click({
     Write-Host "Disabling Background application access..."
-	Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" -Exclude "Microsoft.Windows.Cortana*" | ForEach {
+	Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" -Exclude "Microsoft.Windows.Cortana*" | ForEach-Object {
 		Set-ItemProperty -Path $_.PsPath -Name "Disabled" -Type DWord -Value 1
 		Set-ItemProperty -Path $_.PsPath -Name "DisabledByUser" -Type DWord -Value 1
 	}
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $cortana.Add_Click({
@@ -784,7 +771,7 @@ $cortana.Add_Click({
 		New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search" -Force | Out-Null
 	}
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search" -Name "AllowCortana" -Type DWord -Value 0
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $securitylow.Add_Click({
@@ -814,7 +801,7 @@ $securitylow.Add_Click({
 		New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\MRT" | Out-Null
 	}
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\MRT" -Name "DontOfferThroughWUAU" -Type DWord -Value 1
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $securityhigh.Add_Click({
@@ -842,7 +829,7 @@ $securityhigh.Add_Click({
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\QualityCompat" -Name "cadca5fe-87d3-4b96-b7fb-a231484277cc" -Type DWord -Value 0
     Write-Host "Enabling Malicious Software Removal Tool offering..."
 	Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\MRT" -Name "DontOfferThroughWUAU" -ErrorAction SilentlyContinue
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $defaultwindowsupdate.Add_Click({
@@ -855,7 +842,7 @@ $defaultwindowsupdate.Add_Click({
     Write-Host "Enabling Windows Update automatic restart..."
 	Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "NoAutoRebootWithLoggedOnUsers" -ErrorAction SilentlyContinue
 	Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "AUPowerManagement" -ErrorAction SilentlyContinue
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $securitywindowsupdate.Add_Click({
@@ -880,7 +867,7 @@ $securitywindowsupdate.Add_Click({
 	}
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "NoAutoRebootWithLoggedOnUsers" -Type DWord -Value 1
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "AUPowerManagement" -Type DWord -Value 0
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $actioncenter.Add_Click({
@@ -890,7 +877,7 @@ $actioncenter.Add_Click({
 	}
 	Set-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\Windows\Explorer" -Name "DisableNotificationCenter" -Type DWord -Value 1
 	Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\PushNotifications" -Name "ToastEnabled" -Type DWord -Value 0
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $visualfx.Add_Click({
@@ -905,7 +892,7 @@ $visualfx.Add_Click({
 	Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "TaskbarAnimations" -Type DWord -Value 0
 	Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" -Name "VisualFXSetting" -Type DWord -Value 3
 	Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\DWM" -Name "EnableAeroPeek" -Type DWord -Value 0
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $onedrive.Add_Click({
@@ -934,19 +921,19 @@ $onedrive.Add_Click({
 	}
 	Remove-Item -Path "HKCR:\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" -Recurse -ErrorAction SilentlyContinue
 	Remove-Item -Path "HKCR:\Wow6432Node\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" -Recurse -ErrorAction SilentlyContinue
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $darkmode.Add_Click({
     Write-Host "Enabling Dark Mode"
 	Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 $lightmode.Add_Click({
     Write-Host "Switching Back to Light Mode"
 	Remove-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme
-	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
+	$wshell.Popup("Operation Completed",0,"Done",0x0)
 })
 
 [void]$Form.ShowDialog()
