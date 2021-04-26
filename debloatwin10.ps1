@@ -371,79 +371,79 @@ $installchoco.Add_Click({
     Write-Host "Installing Chocolatey"
 	Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 	choco install chocolatey-core.extension -y
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $brave.Add_Click({
 	Write-Host "Installing Brave Browser"
 	choco install brave -y
-	    $wshell.Popup("Operation Completed",0,"Done",0x0)
+	    $wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $firefox.Add_Click({
     Write-Host "Installing Firefox"
     choco install firefox -y
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $gchrome.Add_Click({
     Write-Host "Installing Google Chrome"
     choco install googlechrome -y
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $irfanview.Add_Click({
     Write-Host "Installing Irfanview (Image Viewer)"
     choco install irfanview -y
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $adobereader.Add_Click({
     Write-Host "Installing Adobe Reader DC"
     choco install adobereader -y
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $notepad.Add_Click({
     Write-Host "Installing Notepad++"
     choco install notepadplusplus -y
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $vlc.Add_Click({
     Write-Host "Installing VLC Media Player"
     choco install vlc -y
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $mpc.Add_Click({
     Write-Host "Installing Media Player Classic"
     choco install mpc-be -y
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $7zip.Add_Click({
     Write-Host "Installing 7-Zip Compression Tool"
     choco install 7zip -y
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $vscode.Add_Click({
     Write-Host "Installing Visual Studio Code"
     choco install vscode -y
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $winterminal.Add_Click({
     Write-Host "Installing New Windows Terminal"
     choco install microsoft-windows-terminal -y
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $powertoys.Add_Click({
     Write-Host "Installing Microsoft PowerToys"
     choco install powertoys -y
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $essentialtweaks.Add_Click({
@@ -723,7 +723,7 @@ $Paint3Dstuff = @(
 	}
     }
 
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $windowssearch.Add_Click({
@@ -739,7 +739,7 @@ $windowssearch.Add_Click({
 	Set-Service "WSearch" -StartupType Disabled
     Write-Host "Hiding Taskbar Search icon / box..."
 	Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search" -Name "SearchboxTaskbarMode" -Type DWord -Value 0
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $backgroundapps.Add_Click({
@@ -748,7 +748,7 @@ $backgroundapps.Add_Click({
 		Set-ItemProperty -Path $_.PsPath -Name "Disabled" -Type DWord -Value 1
 		Set-ItemProperty -Path $_.PsPath -Name "DisabledByUser" -Type DWord -Value 1
 	}
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $cortana.Add_Click({
@@ -770,7 +770,7 @@ $cortana.Add_Click({
 		New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search" -Force | Out-Null
 	}
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search" -Name "AllowCortana" -Type DWord -Value 0
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $securitylow.Add_Click({
@@ -800,7 +800,7 @@ $securitylow.Add_Click({
 		New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\MRT" | Out-Null
 	}
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\MRT" -Name "DontOfferThroughWUAU" -Type DWord -Value 1
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $securityhigh.Add_Click({
@@ -828,7 +828,7 @@ $securityhigh.Add_Click({
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\QualityCompat" -Name "cadca5fe-87d3-4b96-b7fb-a231484277cc" -Type DWord -Value 0
     Write-Host "Enabling Malicious Software Removal Tool offering..."
 	Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\MRT" -Name "DontOfferThroughWUAU" -ErrorAction SilentlyContinue
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $defaultwindowsupdate.Add_Click({
@@ -841,7 +841,7 @@ $defaultwindowsupdate.Add_Click({
     Write-Host "Enabling Windows Update automatic restart..."
 	Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "NoAutoRebootWithLoggedOnUsers" -ErrorAction SilentlyContinue
 	Remove-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "AUPowerManagement" -ErrorAction SilentlyContinue
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $securitywindowsupdate.Add_Click({
@@ -866,7 +866,7 @@ $securitywindowsupdate.Add_Click({
 	}
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "NoAutoRebootWithLoggedOnUsers" -Type DWord -Value 1
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" -Name "AUPowerManagement" -Type DWord -Value 0
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $actioncenter.Add_Click({
@@ -876,7 +876,7 @@ $actioncenter.Add_Click({
 	}
 	Set-ItemProperty -Path "HKCU:\SOFTWARE\Policies\Microsoft\Windows\Explorer" -Name "DisableNotificationCenter" -Type DWord -Value 1
 	Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\PushNotifications" -Name "ToastEnabled" -Type DWord -Value 0
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $visualfx.Add_Click({
@@ -891,7 +891,7 @@ $visualfx.Add_Click({
 	Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "TaskbarAnimations" -Type DWord -Value 0
 	Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects" -Name "VisualFXSetting" -Type DWord -Value 3
 	Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\DWM" -Name "EnableAeroPeek" -Type DWord -Value 0
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $onedrive.Add_Click({
@@ -920,19 +920,19 @@ $onedrive.Add_Click({
 	}
 	Remove-Item -Path "HKCR:\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" -Recurse -ErrorAction SilentlyContinue
 	Remove-Item -Path "HKCR:\Wow6432Node\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" -Recurse -ErrorAction SilentlyContinue
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $darkmode.Add_Click({
     Write-Host "Enabling Dark Mode"
 	Set-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme -Value 0
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 $lightmode.Add_Click({
     Write-Host "Switching Back to Light Mode"
 	Remove-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize -Name AppsUseLightTheme
-	$wshell.Popup("Operation Completed",0,"Done",0x0)
+	$wshell.Popup("Operation completed successfully.",0,"Done",0x0)
 })
 
 [void]$Form.ShowDialog()
