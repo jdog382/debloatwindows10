@@ -574,7 +574,6 @@ $essentialtweaks.Add_Click({
 	Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" -Name "IRPStackSize" -Type DWord -Value 20
 
 $Bloatware = @(
-
 	"Microsoft.3DBuilder"
 	"Microsoft.AppConnector"
 	"Microsoft.Microsoft3DViewer"
@@ -704,7 +703,7 @@ $Bloatware = @(
 
     #Removes Paint3D stuff from context menu
 $Paint3Dstuff = @(
-        "HKCR:\SystemFileAssociations\.3mf\Shell\3D Edit"
+    "HKCR:\SystemFileAssociations\.3mf\Shell\3D Edit"
 	"HKCR:\SystemFileAssociations\.bmp\Shell\3D Edit"
 	"HKCR:\SystemFileAssociations\.fbx\Shell\3D Edit"
 	"HKCR:\SystemFileAssociations\.gif\Shell\3D Edit"
